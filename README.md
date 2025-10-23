@@ -8,11 +8,7 @@ This plugin requires Craft CMS 5.8.0 or later, and PHP 8.2 or later.
 
 ## Installation
 
-You can install this plugin from the Plugin Store or with Composer.
-
-#### From the Plugin Store
-
-Go to the Plugin Store in your project’s Control Panel and search for “ContentReactor CK Configs”. Then press “Install”.
+You can install this plugin with Composer.
 
 #### With Composer
 
