@@ -1,0 +1,35 @@
+{
+  "name": "contentreactor/craft-ck-configs",
+  "description": "Set of default configs and styles for CKEditor plugin",
+  "type": "craft-plugin",
+  "license": "mit",
+  "support": {
+    "email": "support@contentreactor.com"
+  },
+  "require": {
+    "php": ">=8.2",
+    "craftcms/cms": "^5.8.0",
+	"developion/craft-cke-shy": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "contentreactor\\craftckconfigs\\": "src/"
+    }
+  },
+  "extra": {
+    "handle": "cr-ck",
+    "name": "ContentReactor CK Configs",
+    "developer": "ContentReactor",
+    "documentationUrl": ""
+  },
+  "config": {
+    "sort-packages": true,
+    "platform": {
+      "php": "8.2"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  }
+}
