@@ -2,6 +2,7 @@
   "name": "contentreactor/craft-ck-configs",
   "description": "Set of default configs and styles for CKEditor plugin",
   "type": "craft-plugin",
+  "version": "0.1.0",
   "license": "mit",
   "support": {
     "email": "support@contentreactor.com"
