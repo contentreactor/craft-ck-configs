@@ -4,10 +4,13 @@ namespace contentreactor\craftckconfigs;
 
 use contentreactor\craftckconfigs\services\Config;
 use contentreactor\craftckconfigs\traits\Services;
+use contentreactor\craftckconfigs\web\assets\front\FrontAsset;
+use contentreactor\craftckconfigs\web\assets\typography\TypographyAsset;
 use Craft;
 use craft\base\Event;
 use craft\base\Plugin as BasePlugin;
 use craft\services\Plugins;
+use craft\web\View;
 
 /**
  * ContentReactor CK Configs plugin
@@ -53,6 +56,19 @@ class Plugin extends BasePlugin
 			function ($event) {
 				Craft::$app->getPlugins()->installPlugin('cke-shy');
 				$this->getConfig()->generateAllConfigs();
+			}
+		);
+
+		Event::on(
+			View::class,
+			View::EVENT_BEGIN_PAGE,
+			static function (): void {
+				if (Craft::$app->getRequest()->getIsSiteRequest()) {
+					Craft::$app->getView()->registerAssetBundle(FrontAsset::class);
+				}
+				if (Craft::$app->getRequest()->getIsCpRequest()) {
+					Craft::$app->getView()->registerAssetBundle(TypographyAsset::class);
+				}
 			}
 		);
 

@@ -14,7 +14,8 @@
   },
   "autoload": {
     "psr-4": {
-      "contentreactor\\craftckconfigs\\": "src/"
+      "contentreactor\\craftckconfigs\\": "src/",
+      "contentreactor\\craftckconfigs\\web\\assets\\": "public/"
     }
   },
   "extra": {
